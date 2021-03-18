@@ -4,7 +4,7 @@ var submitPasswordButton = document.getElementById("submitPasswordButton");
 
 function onSubmitPasswordButtonClick(event){
     queryParams.set("p",passwordInput.value);
-    history.replaceState(null, null, queryParams.toString());
+    history.replaceState(null, null, "?"+queryParams.toString());
     //validatePassword();
 }
 
