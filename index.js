@@ -21,6 +21,6 @@ function validatePassword(){
 
 
 
-submitPasswordButton.addEventListener("click", onSubmitPasswordbuttonClick);
+submitPasswordButton.addEventListener("click", onSubmitPasswordButtonClick);
 
 validatePassword();
