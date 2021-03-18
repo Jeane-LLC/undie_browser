@@ -2,28 +2,12 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-	  crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-	    crossorigin=""></script>
   </head>
-  <body style="display:flex; flex-wrap:wrap; font-family:Verdana;width:90%;height:90%;">
+  <body style="font-family:Verdana;width:100%;height:100%;">
     <noscript> Whoops, undie.party needs Javascript to work </noscript>
-    <div id="roomMap" style="display:fixed;width:100%;height:100%;z-index:-1">
-      <div id="leaflet" style="width:100%; height:100%; position: fixed;"></div>
-       <script src="./room.js"></script>
- </div>
-    <div id="welcomeModal" style="z-index:1;display:flex;flex-direction:column; align-items:center; justify-content: center;background-color:transparent; width:100%;height:100%;">
-      <div id="modalBackground" style="display:flex;flex-direction:column; align-items:left; justify-content:left;background-color:rgba(0,0,0,0.3);width:60%;height:60%;">
-    <div style="font-size:24pt;">undie<br>party</div>
-    <div style="font-size:16pt;">No one cares<br>what you wear</div>
-    <div id="inputAndSubmit" style="width:100%;height:100%;display:flex;flex-direction:row;">
-    <input id="passwordInput" style="flex:3;text-align:center;max-width:400px; min-width:50%;height:20pt;font-size:18pt;border:none;background-color:black;foreground-color:white;color:white;" type="number" required="true" min="0" step="1" placeholder="Room #"></input>
-    <button type="submit" id="submitPasswordButton" style="corner-radius:10px;width:100px;height:20pt;font-size:18pt;background-color:black;border-color:black;text-align:center;color:grey;">Enter</button>
-    </div>
-  </div>
+    <canvas id="roomMap" style="display:fixed;width:100%;height:100%;z-index:-1;">
+      <script src="room.js"></script>
+ </canvas>
   </body>
   <script src="index.js"></script>
 </html>
