@@ -2,7 +2,7 @@ var roomMap = L.map('leaflet',{
     center: [0.0,0.0],
     zoom:13,
     attributionControl:false,
-    zoomControl: false;
+    zoomControl: false,
 });
 
 
