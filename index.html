@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+	  crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+	    crossorigin=""></script>
   </head>
-  <body style="display:flex;flex-direction:column; align-items:center; justify-content: center;">
-    <h1 style="font-size:36pt;">undie.party</h1>
-    <h3 style="font-size:24pt;">Where no one cares what you wears!"</h3>
+  <body>
+    <div id="roomMap" style="display:float">
+      <div id="leaflet" style="width:100%; height:100%; position: fixed;"></div>
+       <script src="./room.js"></script>
+ </div>
+  <div id="welcome" style="display:flex;flex-direction:column; align-items:center; justify-content: center;">
+    <h3 style="font-size:36pt;">undie.party</h3>
+    <h3 style="font-size:16pt;">No one cares what you wear"</h3>
     <input id="passwordInput" style="flex:3;text-align:center;max-width:400px; min-width:50%;height:20pt;font-size:18pt;border:none;background-color:black;foreground-color:white;color:white;" type="number" required="true" min="0" step="1" placeholder="What's the password?"></input>
     <button type="submit" id="submitPasswordButton" style="corner-radius:10px;width:100px;height:14pt;border-color:transparent;text-align:center;">Let me in!</button>
+  </div>
   </body>
   <script src="index.js"></script>
 </html>
