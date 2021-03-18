@@ -2,8 +2,6 @@ var queryParams = new URLSearchParams(window.location.search);
 var passwordInput = document.getElementById("passwordInput");
 var submitPasswordButton = document.getElementById("submitPasswordButton");
 
-submitPasswordButton.addEventListener("click", onSubmitPasswordbuttonClick);
-
 function onSubmitPasswordButtonClick(event){
     queryParams.set("p",passwordInput.value);
     history.replaceState(null, null, queryParams.toString());
@@ -20,5 +18,9 @@ function validatePassword(){
 	attemptToEnterRoom(password);
     }
 }
+
+
+
+submitPasswordButton.addEventListener("click", onSubmitPasswordbuttonClick);
 
 validatePassword();
