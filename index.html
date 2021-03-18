@@ -8,13 +8,14 @@
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
 	    crossorigin=""></script>
   </head>
-  <body style="font-family:Verdana;width:100%;height:100%;">
+  <body style="display:flex; flex-wrap:wrap; font-family:Verdana;width:100%;height:100%;">
     <noscript> Whoops, undie.party needs Javascript to work </noscript>
-    <div id="roomMap" style="display:fixed;width:100%;height:100%;">
+    <div id="roomMap" style="display:fixed;width:100%;height:100%;z-index:-1">
       <div id="leaflet" style="width:100%; height:100%; position: fixed;"></div>
        <script src="./room.js"></script>
  </div>
-  <div id="welcome" style="z-index:1;display:flex;flex-direction:column; align-items:center; justify-content: center;background-color:rgba(0,0,0,0.1)">
+    <div id="welcomeModal" style="z-index:1;display:flex;flex-direction:column; align-items:center; justify-content: center;background-color:transparent">
+      <div id="modalBackground" style="display:flex;flex-direction:column; align-items:left; justify-content:left;background-color:rgba(0,0,0,0.3);width:60%;height:60%;"
     <h3 style="font-size:36pt;">undie.party</h3>
     <h3 style="font-size:16pt;">No one cares what you wear</h3>
     <input id="passwordInput" style="flex:3;text-align:center;max-width:400px; min-width:50%;height:20pt;font-size:18pt;border:none;background-color:black;foreground-color:white;color:white;" type="number" required="true" min="0" step="1" placeholder="What's the password?"></input>
