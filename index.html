@@ -5,7 +5,55 @@
   </head>
   <body style="font-family:Verdana;width:100%;height:100%;">
     <noscript> Whoops, undie.party needs Javascript to work </noscript>
-    <canvas id="roomMap" style="display:fixed;z-index:-1;" width="100%" height="100%">
+    <div id="controller" style="display:static;min-width:77mm;min-height:124mm;">
+      <canvas id="roomMap" style="display:absolute;top:8mm;left:5mm;min-width:47mm;min-height:58mm;">
+	<div id="dPad" style="display:absolute;min-width:15mm;min-height:15mm;bottom:34mm;left:7mm;">
+	  <div id="leftButton" style="display:absolute;min-width:5mm;min-height:5mm;left:0;top:5mm;">
+	    <svg style="width:100%;height:100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	      <polygon points="0,50 100,100 100,0" style="fill: black;stroke:gray;stroke-width:1"/>
+	      </svg>
+	  </div>
+	  <div id="rightButton" style="display:absolute;min-width:5mm;min-height:5mm;right:0;top:5mm;">
+<svg style="width:100%;height:100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	      <polygon points="0,0 0,100 100,50" style="fill: black;stroke:gray;stroke-width:1"/>
+	      </svg>
+	  </div>
+	  <div id="upButton" style="display:absolute;min-width:5mm;min-height:5mm;right:5mm;top:0;">
+	    <svg style="width:100%;height:100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	      <polygon points="0,0 50,100 100,0" style="fill: black;stroke:gray;stroke-width:1"/>
+	      </svg>
+	  </div>
+	  <div id="downButton" style="display:absolute;min-width:5mm;min-height:5mm;left:5mm;bottom:0;">
+	    <svg style="width:100%;height:100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	      <polygon points="0,100, 50,0 100,100" style="fill: black;stroke:gray;stroke-width:1"/>
+	      </svg>
+	    </div>
+	</div>
+	<div id="startSelect" style="display:absolute;min-width:19mm;min-height:3mm;left:30mm;bottom:12mm;">
+	  <div id="startButton" style="display:absolute;min-width:8mm;min-height:3mm;left:0;bottom:0;">
+	    <svg style="width:100%;height:100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	      <rect width="100" height="100" rx="10" style="fill: black;stroke:gray;stroke-width:1"/>
+	      </svg>
+	  </div>
+	  <div id="selectButton" style="display:absolute;min-width:8mm;min-height:3mm;right:0;bottom:0;">
+	    <svg style="width:100%;height:100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	      <rect width="100" height="100" rx="10" style="fill: black;stroke:gray;stroke-width:1"/>
+	      </svg>
+	    </div>
+	</div>
+	<div id="abButtons" style="display:absolute;min-width:21mm;min-height:12mm;right:7mm;bottom:35mm;">
+	  <div id="bButton" style="display:absolute;min-width:9mm;min-height:9mm;right:0;top:0;">
+	    <svg style="width:100%;height:100%" viewport="0 0 100 100" xmlns="http://www.w3.org/2000/svg" >
+	      <circle cx="50" cy="50" r="50" style="fill: black;stroke:gray;stroke-width:1"/>
+	      </svg>"
+	    </div>
+	  <div id="aButton" style="display:absolute;min-width:9mm;min-height:9mm;left:0;bottom:0;">
+	    <svg style="width:100%;height:100%" viewport="0 0 100 100" xmlns="http://www.w3.org/2000/svg" >
+	      <circle cx="50" cy="50" r="50" style="fill: black;stroke:gray;stroke-width:1"/>
+	      </svg>"
+	    </div>
+	</div>
+      </div>
       <script src="room.js"></script>
  </canvas>
   </body>
