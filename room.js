@@ -1,12 +1,16 @@
 const roomMap = document.getElementById("roomMap")
 const ctx = roomMap.getContext('2d');
 
-
-window.addEventListener('resize',render)
-
-function render(){
-    ctx.canvas.width = window.innerwidth;
+function draw(){
+    ctx.canvas.width = window.innerWidth;
     ctx.canvas.height = window.innerHeight;
+
+
+    ctx.globalCompositeOperation='destination-over';
+    ctx.fillStyle = "grey";
+    ctx.fillRect(0,0, ctx.canvas.width,ctx.canvas.height);
+
+    window.requestAnimationFrame(draw);
 }
 
-render();
+window.requestAnimationFrame(draw);
