@@ -7,7 +7,6 @@ async function attemptToEnterRoom(password){
 function validatePassword(){
     var password = queryParams["p"];
     if(password != undefined && Number.isInteger(password)){
-	submitPasswordButton.value = password;
 	attemptToEnterRoom(password);
     }
 }
