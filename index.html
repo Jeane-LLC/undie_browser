@@ -20,25 +20,39 @@
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera( 75, window.innerWidth/ window.innerHeight, 0.1, 1000);
       const renderer = new THREE.WebGLRenderer();
-      
+
+      scene.background = new THREE.Color(0x444444);
       renderer.setSize( window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
 
+      const lights = [];
+      lights[0] = new THREE.PointLight(0xffffff,1,0);
+      lights[0].position.set(0,-10,5);
+
+      scene.add(lights[0]);
+      
       const pGeometry = new THREE.PlaneGeometry(10000,10000);
       const pMaterial = new THREE.MeshBasicMaterial( {color:0xffff00, side: THREE.DoubleSide});
+      pMaterial.colorWrite = false;
       const plane = new THREE.Mesh( pGeometry, pMaterial);
       scene.add(plane);
 
       
-      const sGeometry = new THREE.SphereGeometry(1,20,20);
+      const sGeometry = new THREE.SphereGeometry(7,20,20);
       const sMaterial = new THREE.MeshBasicMaterial({
 	  color:0x00ff00
       });
 
+      const cGeometry = new THREE.SphereGeometry(9,6,6,0.0,Math.PI,0.0,Math.PI/2.0);
+      const cMaterial = new THREE.MeshBasicMaterial({
+	  color:0x00ff00
+      });
       
       const sphere = new THREE.Mesh(sGeometry, sMaterial);
+      const curve = new THREE.Mesh(cGeometry, cMaterial);
+      sphere.add(curve);
       scene.add(sphere);
-      camera.position.z = 5;
+      camera.position.z = 75;
 
       const raycaster = new THREE.Raycaster();
       const mouse = new THREE.Vector2();
